@@ -1,0 +1,109 @@
+.filter-form {
+  box-sizing: border-box;
+  width: 308px;
+  min-height: 328px;
+  padding: 30px;
+  padding-bottom: 0;
+  background-color: @white;
+}
+
+.filter-form__button {
+  width: 248px;
+  height: 35px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filter-form__button--submit {
+  background-color: @blue;
+  color: @white;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-dark;
+  }
+}
+
+.filter-form__button--reset {
+  margin-top: 10px;
+  background-color: @gray-lighter;
+  color: @black;
+
+  &:hover,
+  &:focus {
+    background-color: @gray-light;
+  }
+}
+
+.filter-form__fieldset {
+  margin-top: 32px;
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-form__legend {
+  padding-left: 0;
+  font-size: 17px;
+}
+
+.filter-form__brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2px;
+  padding-left: 0;
+  list-style: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+  color: @gray-darker;
+
+
+  li {
+    display: block;
+    width: 90px;
+    margin-top: 10px;
+    padding-left: 23px;
+  }
+}
+
+.filter-form__brands-list li:nth-child(2n+1) {
+  margin-right: 20px;
+}
+
+.filter-form__label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -24px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid @gray-medium;
+    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.07);
+  }
+
+  &:hover {
+    color: @blue-light;
+  }
+}
+
+.filter-form__checkbox-input:checked + .filter-form__label::before {
+  background-image: url("assets/check-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: @blue;
+}
+
+.filter-form__checkbox-input:checked + .filter-form__label {
+  color: @blue-light;
+}
+
+.filter-form__checkbox-input:hover + .filter-form__label::before,
+.filter-form__checkbox-input:focus + .filter-form__label::before {
+  border-color: @blue;
+}
